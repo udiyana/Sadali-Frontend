@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "name": "Dashboard: exactly three brands and visible demo notice",
+      "passed": true
+    },
+    {
+      "name": "Required form validation prevents empty service",
+      "passed": true
+    },
+    {
+      "name": "Service create reads back into scoped table",
+      "passed": true
+    },
+    {
+      "name": "Service edit persists",
+      "passed": true
+    },
+    {
+      "name": "Dirty form cancellation requires explicit discard",
+      "passed": true
+    },
+    {
+      "name": "Brand switch does not expose another brand service",
+      "passed": true
+    },
+    {
+      "name": "Demo changes survive reload through dedicated localStorage",
+      "passed": true
+    },
+    {
+      "name": "Confirmed service delete updates scoped table",
+      "passed": true
+    },
+    {
+      "name": "Selected-page editor creates and reads back a section",
+      "passed": true
+    },
+    {
+      "name": "Page delete confirmed and removed",
+      "passed": true
+    },
+    {
+      "name": "Module navigation: Artikel",
+      "passed": true
+    },
+    {
+      "name": "Module navigation: Produk",
+      "passed": true
+    },
+    {
+      "name": "Module navigation: Banner",
+      "passed": true
+    },
+    {
+      "name": "Module navigation: Properti",
+      "passed": true
+    },
+    {
+      "name": "Module navigation: Tamu",
+      "passed": true
+    },
+    {
+      "name": "Module navigation: Profil brand",
+      "passed": true
+    },
+    {
+      "name": "Module navigation: Pengaturan",
+      "passed": true
+    },
+    {
+      "name": "Module navigation: Pengguna",
+      "passed": true
+    },
+    {
+      "name": "Module navigation: Aktivitas",
+      "passed": true
+    },
+    {
+      "name": "Mobile 390px navigation works without horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "Live panel redirects anonymous visitor to login",
+      "passed": true
+    },
+    {
+      "name": "No JavaScript errors or API mutations in demo",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "apiMutations": [],
+  "scope": "Demo browser workflows; live authentication redirect only. No production DB writes."
+}

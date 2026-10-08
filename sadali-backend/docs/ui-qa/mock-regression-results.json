@@ -1,0 +1,133 @@
+{
+  "scope": "Controlled intercepted API fixtures only; not authenticated production verification",
+  "results": [
+    {
+      "name": "Banner permissions independent of paginated picker",
+      "passed": true,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "brands"
+        },
+        {
+          "method": "GET",
+          "path": "brands"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/banners"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/pages"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/pages/925"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/banners/9901"
+        }
+      ]
+    },
+    {
+      "name": "Successful POST then failed verification retries GET only",
+      "passed": true,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "brands"
+        },
+        {
+          "method": "GET",
+          "path": "brands"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/services"
+        },
+        {
+          "method": "POST",
+          "path": "brands/1/services"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/services/105"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/services/105"
+        },
+        {
+          "method": "GET",
+          "path": "brands"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/services"
+        }
+      ]
+    },
+    {
+      "name": "Administrator banner preserves off-picker selection 90",
+      "passed": true,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "brands"
+        },
+        {
+          "method": "GET",
+          "path": "brands"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/banners"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/pages"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/banners/9901"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/pages/925"
+        }
+      ]
+    },
+    {
+      "name": "Administrator banner preserves off-picker selection 91",
+      "passed": true,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "brands"
+        },
+        {
+          "method": "GET",
+          "path": "brands"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/banners"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/pages"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/banners/9901"
+        },
+        {
+          "method": "GET",
+          "path": "brands/1/pages/925"
+        }
+      ]
+    }
+  ]
+}

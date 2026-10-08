@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Clearing section content removes old values",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "name": "Arrow page opener resets section pagination",
+    "passed": true,
+    "errors": []
+  }
+]

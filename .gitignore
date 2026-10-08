@@ -1,0 +1,13 @@
+/sadali-frontend/node_modules
+/sadali-frontend/dist
+/sadali-backend/vendor
+/sadali-backend/node_modules
+/sadali-backend/.env
+/sadali-backend/public/hot
+/sadali-backend/public/storage
+/sadali-backend/storage/*.key
+/sadali-backend/storage/logs/*.log
+/sadali-backend/storage/framework/cache/data/*
+/sadali-backend/storage/framework/sessions/*
+/sadali-backend/storage/framework/testing/*
+/sadali-backend/storage/framework/views/*

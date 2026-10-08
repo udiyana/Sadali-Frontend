@@ -1,0 +1,266 @@
+{
+  "scope": "Actual mounted React against Laravel with explicit intercepted API fixtures built from real repository snapshot and server definition; not production auth/CRUD",
+  "results": [
+    {
+      "name": "Acala page-specific content and save verification retry",
+      "passed": true,
+      "errors": [],
+      "calls": [
+        {
+          "path": "brands/901/definition",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        },
+        {
+          "path": "brands/901/content-blocks",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20",
+            "page_key": "home"
+          }
+        },
+        {
+          "path": "brands/901/content-blocks/1",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands/901/content-blocks/1",
+          "method": "PATCH",
+          "query": {}
+        },
+        {
+          "path": "brands/901/content-blocks/1",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands/901/content-blocks/1",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands/901/definition",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        },
+        {
+          "path": "brands/901/content-blocks",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20",
+            "page_key": "home"
+          }
+        },
+        {
+          "path": "brands/901/content-blocks",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20",
+            "page_key": "about"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Acala dataset detail JSON and image-slot pagination",
+      "passed": true,
+      "errors": [],
+      "calls": [
+        {
+          "path": "brands/901/definition",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        },
+        {
+          "path": "brands/901/content-blocks",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20",
+            "page_key": "home"
+          }
+        },
+        {
+          "path": "brands/901/datasets",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        },
+        {
+          "path": "brands/901/datasets/1",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands/901/image-slots",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        },
+        {
+          "path": "brands/901/image-slots",
+          "method": "GET",
+          "query": {
+            "page": "2",
+            "per_page": "20"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Acala editor cannot edit published content or publish drafts",
+      "passed": true,
+      "errors": [],
+      "calls": [
+        {
+          "path": "brands/901/definition",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        },
+        {
+          "path": "brands/901/content-blocks",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20",
+            "page_key": "home"
+          }
+        },
+        {
+          "path": "brands/901/datasets",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        },
+        {
+          "path": "brands/901/image-slots",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Dataset null and scalar JSON remain editable through the mounted form",
+      "passed": true,
+      "errors": [],
+      "calls": [
+        {
+          "path": "brands/901/definition",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        },
+        {
+          "path": "brands/901/content-blocks",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20",
+            "page_key": "home"
+          }
+        },
+        {
+          "path": "brands/901/datasets",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        },
+        {
+          "path": "brands/901/datasets/1",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands/901/datasets/1",
+          "method": "PATCH",
+          "query": {}
+        },
+        {
+          "path": "brands/901/datasets/1",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands/901/datasets/1",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands/901/definition",
+          "method": "GET",
+          "query": {}
+        },
+        {
+          "path": "brands",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        },
+        {
+          "path": "brands/901/datasets",
+          "method": "GET",
+          "query": {
+            "page": "1",
+            "per_page": "20"
+          }
+        }
+      ]
+    }
+  ]
+}
