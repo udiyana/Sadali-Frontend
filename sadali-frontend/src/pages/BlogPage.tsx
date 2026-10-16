@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
-type PageType = 'home' | 'about' | 'treatments' | 'blog';
+type PageType = 'home' | 'about' | 'treatments' | 'blog' | 'contact';
 type Category = 'ALL' | 'WELLNESS TIPS' | 'BEAUTY SECRETS' | 'SPA NEWS';
 
 interface BlogPost {
@@ -15,6 +15,7 @@ interface BlogPost {
 
 interface BlogPageProps {
     onNavigate: (page: PageType, sectionId?: string) => void;
+    onOpenBooking?: (service?: string) => void;
 }
 
 // ─── Dummy Data ───────────────────────────────────────────────────────────────

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-type PageType = 'home' | 'about' | 'treatments' | 'blog';
+type PageType = 'home' | 'about' | 'treatments' | 'blog' | 'contact';
 
 interface NavbarProps {
     currentPage: PageType;
@@ -106,10 +106,16 @@ export default function Navbar({ currentPage, onNavigate, onOpenBooking }: Navba
 
                 {/* Contact */}
                 <button
-                    onClick={() => onNavigate('home', 'contact')}
-                    className="hover:text-gold transition cursor-pointer focus:outline-none"
+                    onClick={() => onNavigate('contact')}
+                    className="flex flex-col items-center group transition cursor-pointer focus:outline-none"
                 >
-                    Contact
+                    <span className={`mb-1 transition ${
+                        currentPage === 'contact' ? 'text-[#2b2927] font-semibold' : 'hover:text-gold'
+                    }`}>Contact</span>
+                    {currentPage === 'contact' && (
+                        <motion.span layoutId="nav-dot" className="w-1.5 h-1.5 rounded-full bg-gold"
+                            transition={{ type: 'spring', stiffness: 380, damping: 30 }} />
+                    )}
                 </button>
 
                 {/* Book Now Button */}
@@ -165,8 +171,8 @@ export default function Navbar({ currentPage, onNavigate, onOpenBooking }: Navba
                             className={`text-left text-base font-medium py-1 ${currentPage === 'blog' ? 'text-gold font-bold' : 'hover:text-gold'}`}>
                             Blog
                         </button>
-                        <button onClick={() => { onNavigate('home', 'contact'); setMobileMenuOpen(false); }}
-                            className="text-left text-base font-medium py-1 hover:text-gold">
+                        <button onClick={() => { onNavigate('contact'); setMobileMenuOpen(false); }}
+                            className={`text-left text-base font-medium py-1 ${currentPage === 'contact' ? 'text-gold font-bold' : 'hover:text-gold'}`}>
                             Contact
                         </button>
                     </motion.div>

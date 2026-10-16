@@ -7,8 +7,9 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import TreatmentsPage from './pages/TreatmentsPage';
 import BlogPage from './pages/BlogPage';
+import ContactPage from './pages/ContactPage';
 
-type PageType = 'home' | 'about' | 'treatments' | 'blog';
+type PageType = 'home' | 'about' | 'treatments' | 'blog' | 'contact';
 
 export default function App() {
     const [currentPage, setCurrentPage] = useState<PageType>('home');
@@ -28,6 +29,9 @@ export default function App() {
                 window.scrollTo({ top: 0, behavior: 'instant' });
             } else if (hash === '#blog') {
                 setCurrentPage('blog');
+                window.scrollTo({ top: 0, behavior: 'instant' });
+            } else if (hash === '#contact') {
+                setCurrentPage('contact');
                 window.scrollTo({ top: 0, behavior: 'instant' });
             } else {
                 setCurrentPage('home');
@@ -135,6 +139,20 @@ export default function App() {
                             transition={{ duration: 0.3 }}
                         >
                             <BlogPage onNavigate={handleNavigate} onOpenBooking={handleOpenBooking} />
+                        </motion.div>
+                    )}
+                    {currentPage === 'contact' && (
+                        <motion.div
+                            key="page-contact"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <ContactPage
+                                onNavigate={handleNavigate}
+                                onOpenBooking={handleOpenBooking}
+                            />
                         </motion.div>
                     )}
                 </AnimatePresence>
