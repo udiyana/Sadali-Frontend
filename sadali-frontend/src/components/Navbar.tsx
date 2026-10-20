@@ -19,14 +19,13 @@ export default function Navbar({ currentPage, onNavigate, onOpenBooking }: Navba
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const isDarkNav = currentPage === 'home' && !scrolled;
 
     return (
         <nav
-            className={`fixed top-0 w-full z-50 px-6 md:px-12 py-4 md:py-5 flex items-center justify-between transition-all duration-300 ${
-                isDarkNav
-                    ? 'bg-black/30 backdrop-blur-md text-white'
-                    : 'bg-[#f6f6f4]/90 md:bg-[#f6f6f4]/95 backdrop-blur-md shadow-sm text-[#3d3b38]'
+            className={`fixed top-0 w-full z-50 px-6 md:px-12 py-4 md:py-4.5 flex items-center justify-between transition-all duration-300 ${
+                scrolled
+                    ? 'bg-[#FAF5EB]/95 backdrop-blur-md shadow-sm text-[#3d3b38] border-b border-[#E8D7B8]/50'
+                    : 'bg-[#FAF5EB]/90 md:bg-[#FAF5EB]/85 backdrop-blur-md text-[#3d3b38] border-b border-[#E8D7B8]/30'
             }`}
         >
             {/* Logo */}
@@ -37,9 +36,7 @@ export default function Navbar({ currentPage, onNavigate, onOpenBooking }: Navba
                 <img
                     src="/images/Logo-Sadali.png"
                     alt="SADALI"
-                    className={`h-9 md:h-11 object-contain transition-all duration-300 ${
-                        isDarkNav ? 'brightness-0 invert' : ''
-                    }`}
+                    className="h-9 md:h-11 object-contain transition-all duration-300"
                 />
             </button>
 
@@ -52,8 +49,8 @@ export default function Navbar({ currentPage, onNavigate, onOpenBooking }: Navba
                 >
                     <span className={`mb-1 transition ${
                         currentPage === 'home'
-                            ? isDarkNav ? 'text-white font-semibold' : 'text-[#2b2927] font-semibold'
-                            : 'hover:text-gold'
+                            ? 'text-[#2b2927] font-semibold'
+                            : 'hover:text-gold text-[#5a4033]'
                     }`}>Home</span>
                     {currentPage === 'home' && (
                         <motion.span layoutId="nav-dot" className="w-1.5 h-1.5 rounded-full bg-gold"
