@@ -522,7 +522,7 @@ export default function HomePage({ onNavigate, onOpenBooking }: HomePageProps) {
                     {/* Card 1 */}
                     <div className="rounded-2xl md:rounded-3xl bg-[#FAF4E8] border border-[#E5D2B3]/80 p-4 sm:p-5 shadow-[0_10px_30px_rgba(74,53,37,0.06)] hover:shadow-[0_20px_45px_rgba(74,53,37,0.14)] transition-all duration-300 group flex flex-col justify-between cursor-pointer">
                         <div className="overflow-hidden rounded-xl md:rounded-2xl h-[220px] mb-5">
-                            <img src="Public/images/Short-Treatment.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="The Secrets of Balinese Healing" />
+                            <img src="/images/Short-Treatment.JPG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="The Secrets of Balinese Healing" />
                         </div>
                         <div className="px-1 flex-1 flex flex-col justify-between">
                             <div>
@@ -546,7 +546,7 @@ export default function HomePage({ onNavigate, onOpenBooking }: HomePageProps) {
                     {/* Card 2 */}
                     <div className="rounded-2xl md:rounded-3xl bg-[#FAF4E8] border border-[#E5D2B3]/80 p-4 sm:p-5 shadow-[0_10px_30px_rgba(74,53,37,0.06)] hover:shadow-[0_20px_45px_rgba(74,53,37,0.14)] transition-all duration-300 group flex flex-col justify-between cursor-pointer">
                         <div className="overflow-hidden rounded-xl md:rounded-2xl h-[220px] mb-5">
-                            <img src="Public/images/Short-Treatment.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Holistic Luxury Nail Care" />
+                            <img src="/images/Manicure-Pedicure.jpeg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Holistic Luxury Nail Care" />
                         </div>
                         <div className="px-1 flex-1 flex flex-col justify-between">
                             <div>
@@ -570,7 +570,7 @@ export default function HomePage({ onNavigate, onOpenBooking }: HomePageProps) {
                     {/* Card 3 */}
                     <div className="rounded-2xl md:rounded-3xl bg-[#FAF4E8] border border-[#E5D2B3]/80 p-4 sm:p-5 shadow-[0_10px_30px_rgba(74,53,37,0.06)] hover:shadow-[0_20px_45px_rgba(74,53,37,0.14)] transition-all duration-300 group flex flex-col justify-between cursor-pointer">
                         <div className="overflow-hidden rounded-xl md:rounded-2xl h-[220px] mb-5">
-                            <img src="Public/images/Short-Treatment.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Calming Scents for Island Living" />
+                            <img src="/images/Scrub-Mask.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Calming Scents for Island Living" />
                         </div>
                         <div className="px-1 flex-1 flex flex-col justify-between">
                             <div>
