@@ -70,78 +70,116 @@ export default function AboutPage({ onNavigate, onOpenBooking }: AboutPageProps)
 
     return (
         <main className="bg-gradient-to-b from-[#FAF5EB] via-[#F4E3C5] via-[#EED6AC] via-[#FAF2E1] to-[#E2C28F] min-h-screen text-[#3d3b38]">
-            {/* Hero Banner matching Image 1 exact crop & mist fade */}
-            <section className="relative w-full h-[480px] sm:h-[520px] md:h-[560px] lg:h-[600px] overflow-hidden flex flex-col items-center justify-start text-center">
-                {/* Background Image Container with exact crop and seamless mist fade */}
+            {/* Hero Banner matching user design — full illuminated SADALI sign & solid text */}
+            <section className="relative w-full h-[540px] sm:h-[600px] md:h-[660px] lg:h-[700px] overflow-hidden flex flex-col items-center justify-start text-center">
+                {/* Background Image Container with Ken Burns zoom and seamless mist fade */}
                 <div className="absolute inset-0 w-full h-full">
-                    <img
-                        src="/images/about-hero-cropped.jpg"
-                        alt="About Sadali Spa & Salon Nusa Dua"
-                        className="w-full h-full object-cover object-[center_86%] sm:object-[center_84%]"
-                        style={{
-                            WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0.5) 92%, rgba(0,0,0,0) 100%)',
-                            maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0.5) 92%, rgba(0,0,0,0) 100%)',
-                        }}
-                    />
-                    {/* Atmospheric Dark Tint for Text Contrast */}
+                    <motion.div
+                        initial={{ scale: 1.08 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 2.2, ease: 'easeOut' }}
+                        className="w-full h-full"
+                    >
+                        <img
+                            src="/images/about-hero-cropped.jpg"
+                            alt="About Sadali Spa & Salon Nusa Dua"
+                            className="w-full h-full object-cover object-[center_95%] sm:object-[center_92%]"
+                            style={{
+                                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,0.4) 96%, rgba(0,0,0,0) 100%)',
+                                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,0.4) 96%, rgba(0,0,0,0) 100%)',
+                            }}
+                        />
+                    </motion.div>
+
+                    {/* Atmospheric Dark Tint for Text Contrast & Solid Look */}
                     <div className="absolute inset-0 bg-black/25 pointer-events-none" style={{
-                        WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 55%, rgba(0,0,0,0) 80%)',
-                        maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 55%, rgba(0,0,0,0) 80%)'
+                        WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 50%, rgba(0,0,0,0) 75%)',
+                        maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 50%, rgba(0,0,0,0) 75%)'
                     }} />
-                    {/* Cream mist fade at bottom matching design */}
-                    <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#FAF2E1] via-[#FAF2E1]/70 to-transparent pointer-events-none" />
+
+                    {/* Soft Mist fade at bottom blending seamlessly into page background */}
+                    <div className="absolute bottom-0 inset-x-0 h-20 sm:h-24 bg-gradient-to-t from-[#FAF5EB] via-[#FAF5EB]/50 to-transparent pointer-events-none" />
                 </div>
 
-                {/* Hero Text Content matching Image 3 (original design) */}
-                <div className="relative z-10 max-w-2xl px-4 flex flex-col items-center justify-center pt-32 sm:pt-36 md:pt-40 lg:pt-44">
-                    <h1 className="text-4xl sm:text-5xl md:text-[56px] font-serif text-[#EBD5B3] mb-3 leading-tight drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] tracking-wide font-normal">
+                {/* Hero Text Content matching user design — lowered position, warm gold, smooth animation */}
+                <div className="relative z-10 max-w-2xl px-4 flex flex-col items-center justify-center pt-39 sm:pt-49 md:pt-55 lg:pt-60">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 28 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.15, ease: [0.25, 1, 0.5, 1] }}
+                        className="text-4xl sm:text-5xl md:text-[56px] font-serif text-[#E8CDA2] mb-3 leading-tight drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] tracking-wide font-normal"
+                    >
                         About Sadali
-                    </h1>
-                    <p className="text-[#FAF3E6]/95 text-sm sm:text-base md:text-[16px] font-light max-w-lg mx-auto drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] leading-relaxed">
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 18 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.9, delay: 0.35, ease: [0.25, 1, 0.5, 1] }}
+                        className="text-[#F3E5D0] text-sm sm:text-base md:text-[16px] font-normal max-w-lg mx-auto drop-shadow-[0_1px_8px_rgba(0,0,0,0.95)] leading-relaxed"
+                    >
                         Your sanctuary for authentic Balinese healing, luxury beauty rituals,<br className="hidden sm:inline" /> and holistic wellness Nusa Dua.
-                    </p>
+                    </motion.p>
                 </div>
             </section>
 
-            {/* Intro Section matching Image 1 & 3 */}
+            {/* Intro Section matching Image 1 & 3 — with smooth whileInView animation */}
             <section className="pt-8 pb-20 px-6 text-center max-w-4xl mx-auto">
-                <div className="flex flex-col items-center justify-center mb-6">
-                    <img src="/images/Logo-Sadali.png" alt="SADALI" className="h-16 md:h-20 object-contain mb-3" />
-                </div>
-                <div className="text-xs md:text-sm tracking-[0.2em] font-medium uppercase mb-6 text-[#5a4033]">
-                    The Sadali Experience
-                </div>
-                <h2 className="text-3xl md:text-[44px] font-serif text-[#2b2927] font-normal leading-[1.25] mb-8">
-                    Crafting Authentic Balinese Healing<br />&amp; Beauty inside Bali Collection
-                </h2>
-                <div className="space-y-6 text-gray-700 text-base md:text-[17px] leading-relaxed max-w-3xl mx-auto font-light">
-                    <p>Welcome to Sadali Spa &amp; Salon, widely celebrated as the best spa in Nusa Dua. Tucked inside the serene grounds of Bali Collection, our sanctuary was created to provide a tranquil escape from island exploration.</p>
-                    <p>Whether you are searching for a restorative massage near me after a day on the beach or seeking a full beauty refresh at a top salon near me, we welcome you to experience pure relaxation.</p>
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: 32 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.35 }}
+                    transition={{ duration: 0.85, ease: [0.25, 1, 0.5, 1] }}
+                >
+                    <div className="flex flex-col items-center justify-center mb-6">
+                        <img src="/images/Logo-Sadali.png" alt="SADALI" className="h-16 md:h-20 object-contain mb-3" />
+                    </div>
+                    <div className="text-xs md:text-sm tracking-[0.2em] font-medium uppercase mb-6 text-[#5a4033]">
+                        The Sadali Experience
+                    </div>
+                    <h2 className="text-3xl md:text-[44px] font-serif text-[#2b2927] font-normal leading-[1.25] mb-8">
+                        Crafting Authentic Balinese Healing<br />&amp; Beauty inside Bali Collection
+                    </h2>
+                    <div className="space-y-6 text-gray-700 text-base md:text-[17px] leading-relaxed max-w-3xl mx-auto font-light">
+                        <p>Welcome to Sadali Spa &amp; Salon, widely celebrated as the best spa in Nusa Dua. Tucked inside the serene grounds of Bali Collection, our sanctuary was created to provide a tranquil escape from island exploration.</p>
+                        <p>Whether you are searching for a restorative massage near me after a day on the beach or seeking a full beauty refresh at a top salon near me, we welcome you to experience pure relaxation.</p>
+                    </div>
+                </motion.div>
             </section>
 
-            {/* Lounge Banner */}
+            {/* Lounge Banner with smooth scroll animation */}
             <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 mb-24">
-                <div className="relative w-full h-[260px] sm:h-[360px] md:h-[460px] overflow-hidden rounded-2xl shadow-[0_15px_40px_rgba(74,53,37,0.12)] border border-[#3d3b38]/10 group">
+                <motion.div
+                    initial={{ opacity: 0, y: 32 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.85, ease: [0.25, 1, 0.5, 1] }}
+                    className="relative w-full h-[260px] sm:h-[360px] md:h-[460px] overflow-hidden rounded-2xl shadow-[0_15px_40px_rgba(74,53,37,0.12)] border border-[#3d3b38]/10 group"
+                >
                     <img
-                        src="/images/Background-2.jpg"
+                        src="/images/Background-3.jpg"
                         alt="Sadali Spa Relaxation Lounge"
                         className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
-                </div>
+                </motion.div>
             </section>
 
             {/* Team Carousel - Tight Overlap Spacing matching Image 2 */}
             <section className="py-20 px-4 text-center overflow-hidden">
-                <div className="max-w-4xl mx-auto mb-12">
+                <motion.div
+                    initial={{ opacity: 0, y: 32 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.35 }}
+                    transition={{ duration: 0.85, ease: [0.25, 1, 0.5, 1] }}
+                    className="max-w-4xl mx-auto mb-12"
+                >
                     <h2 className="text-3xl md:text-[44px] font-serif font-normal text-[#2b2927] leading-tight mb-3">
                         Meet Our<br />Professional Team
                     </h2>
                     <p className="text-gray-600 text-sm md:text-base font-light max-w-md mx-auto">
                         Dedicated therapists and stylists providing exceptional care for your spa near me experience.
                     </p>
-                </div>
+                </motion.div>
 
                 <div className="relative max-w-2xl mx-auto flex items-center justify-center select-none min-h-[480px]">
                     {/* Left Arrow - Clean Chevron matching Image 2 */}
@@ -256,11 +294,10 @@ export default function AboutPage({ onNavigate, onOpenBooking }: AboutPageProps)
                         <button
                             key={idx}
                             onClick={() => handleDot(idx)}
-                            className={`transition-all duration-400 cursor-pointer focus:outline-none ${
-                                idx === currentIndex
+                            className={`transition-all duration-400 cursor-pointer focus:outline-none ${idx === currentIndex
                                     ? 'w-8 h-2 bg-[#D8B97E] rounded-full'
                                     : 'w-2 h-2 bg-[#d1c5b8] hover:bg-[#b8a99a] rounded-full'
-                            }`}
+                                }`}
                             aria-label={`Go to staff slide ${idx + 1}`}
                         />
                     ))}

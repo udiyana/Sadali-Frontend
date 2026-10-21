@@ -90,7 +90,7 @@ export default function TreatmentsPage({ onOpenBooking }: TreatmentsPageProps) {
                     className="absolute inset-0 z-0"
                 >
                     <img
-                        src="/images/treatments-hero-bg.jpg"
+                        src="/images/blog-menu-hero.jpg"
                         alt="Sadali Spa Treatments"
                         className="w-full h-full object-cover object-center"
                     />
@@ -104,7 +104,7 @@ export default function TreatmentsPage({ onOpenBooking }: TreatmentsPageProps) {
                         initial={{ opacity: 0, y: 28 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.15, ease: [0.25, 1, 0.5, 1] }}
-                        className="font-serif text-[40px] sm:text-[54px] md:text-[66px] lg:text-[74px] text-[#F8EDDA] font-bold leading-[1.1] tracking-tight drop-shadow-[0_4px_22px_rgba(0,0,0,0.6)] mb-4"
+                        className="font-serif text-[35px] sm:text-[45px] md:text-[60px] lg:text-[70px] text-[#F8EDDA] font-bold leading-[1.1] tracking-tight drop-shadow-[0_4px_22px_rgba(0,0,0,0.6)] mb-4"
                     >
                         Our Treatment Menu
                     </motion.h1>

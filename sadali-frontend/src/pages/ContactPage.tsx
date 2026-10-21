@@ -57,7 +57,7 @@ export default function ContactPage({ onNavigate, onOpenBooking }: ContactPagePr
             {/* ── 2. HERO SECTION (ANIMATED) ── */}
             <section
                 className="relative w-full h-[440px] md:h-[500px] lg:h-[540px] bg-cover bg-center bg-no-repeat overflow-hidden flex flex-col justify-center items-center text-center px-4 pt-20"
-                style={{ backgroundImage: "url('/images/Model.JPG')" }}
+                style={{ backgroundImage: "url('/images/blog-menu-hero.jpg')" }}
             >
                 {/* Dark gradient overlay for luxury mood & text readability */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/75 pointer-events-none" />
@@ -69,13 +69,11 @@ export default function ContactPage({ onNavigate, onOpenBooking }: ContactPagePr
                             onClick={() => onNavigate('home')}
                             className="hover:text-[#E5C989] transition-colors cursor-pointer focus:outline-none"
                         >
-                            Home
+                        
                         </button>
-                        <span>/</span>
-                        <span className="text-[#E5C989]">Contact</span>
                     </div>
                     <h1 className="font-serif text-[#E5C989] text-5xl md:text-6xl lg:text-7xl font-normal tracking-wide animate-fade-in-up">
-                        Contact
+                        Contact Us
                     </h1>
                     <p className="font-sans text-white/95 text-base md:text-lg lg:text-[19px] font-light leading-relaxed max-w-2xl mx-auto mt-5 animate-fade-in-up [animation-delay:250ms] [animation-fill-mode:both]">
                         Get in touch with Sadali Spa &amp; Salon to plan your ultimate wellness Nusa Dua retreat or schedule your beauty appointments.
